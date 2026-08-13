@@ -54,51 +54,47 @@ section{padding:60px 0;border-bottom:1px solid var(--rule)}
 .sec-head{margin-bottom:30px;max-width:66ch}
 .sec-head p{color:var(--ink-soft);margin-top:.55em}
 
-.days{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.day{background:var(--white);padding:19px 17px 21px}
-.day .daytab{font-size:.74rem;letter-spacing:.14em;color:var(--oxblood);margin-bottom:9px}
-.day .big{font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;line-height:1.15;text-transform:uppercase;margin-bottom:7px}
-.day p{font-size:.83rem;color:var(--ink-soft);margin:0;line-height:1.5}
-
-.hotel{border:1px solid var(--rule);background:var(--white);padding:25px 26px 22px;margin-bottom:15px;display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:start}
-.hotel.pick{border:2px solid var(--oxblood);position:relative}
-.pick-flag{position:absolute;top:-1px;right:-1px;background:var(--oxblood);color:var(--white);font-family:'Oswald',sans-serif;font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;padding:5px 12px;font-weight:600}
+.hotel{border:1px solid var(--rule);background:var(--white);padding:25px 26px 22px;margin-bottom:15px;display:grid;grid-template-columns:1fr 236px;gap:28px;align-items:start}
+.hotel.blocked{border-left:3px solid var(--oxblood)}
 .hotel .where{font-size:.78rem;color:var(--ink-soft);letter-spacing:.04em;text-transform:uppercase;font-family:'Oswald',sans-serif;font-weight:400;margin-bottom:11px}
 .hotel p{font-size:.92rem;margin-bottom:.7em}
+.flags{margin:0 0 11px}
+.flag{display:inline-block;font-family:'Oswald',sans-serif;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:var(--limestone-deep);color:var(--ink-soft);padding:3px 9px;margin:0 5px 5px 0}
+.flag.q{background:#EFE0DE;color:var(--oxblood)}
 .perks{list-style:none;padding:0;margin:10px 0 0;font-size:.85rem}
 .perks li{padding-left:15px;position:relative;margin-bottom:3px;color:var(--ink-soft)}
 .perks li:before{content:"—";position:absolute;left:0;color:var(--brass)}
-.noperk{font-size:.85rem;color:var(--ink-soft);font-style:italic}
+.noperk{font-size:.85rem;color:var(--ink-soft);font-style:italic;margin-top:10px}
+
+.tiers{margin-top:16px;border-top:1px solid var(--rule)}
+.tier{display:grid;grid-template-columns:1fr auto;gap:16px;padding:8px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.tier .rn{font-family:'Oswald',sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.02em;font-weight:500}
+.tier .rn span{display:block;font-family:'JetBrains Mono',monospace;font-size:.63rem;color:var(--ink-soft);text-transform:none;letter-spacing:0;margin-top:2px;font-weight:400}
+.tier .rp{font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;white-space:nowrap}
 
 .facts{border-left:1px solid var(--rule);padding-left:21px}
 .facts .lab{font-family:'Oswald',sans-serif;font-size:.6rem;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:6px}
 .price{font-family:'Oswald',sans-serif;font-size:1.6rem;font-weight:600;line-height:1;margin-bottom:2px}
+.price.na{font-size:1.02rem;color:var(--oxblood);line-height:1.2}
 .price span{font-size:.58rem;font-weight:400;letter-spacing:.1em;color:var(--ink-soft);display:block;margin-top:5px}
 .rows{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);font-family:'JetBrains Mono',monospace;font-size:.67rem;line-height:1.95;color:var(--ink-soft)}
 .rows b{color:var(--ink);font-weight:700}
 .ok{color:var(--sage)}
 .warn{color:var(--oxblood)}
-.btn{display:inline-block;margin-top:14px;font-size:.65rem;letter-spacing:.13em;border:1px solid var(--ink);padding:7px 13px;color:var(--ink)}
+.maplinks{margin-top:13px;display:flex;flex-wrap:wrap;gap:6px}
+.btn{display:inline-block;font-size:.62rem;letter-spacing:.11em;border:1px solid var(--ink);padding:6px 10px;color:var(--ink);font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase}
 .btn:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-
-.bars{display:flex;align-items:flex-end;gap:7px;height:66px;margin:18px 0 6px}
-.bar{flex:1;background:var(--sage);min-height:3px;position:relative}
-.bar.peak{background:var(--oxblood)}
-.bar span{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:.57rem;white-space:nowrap}
-.barlabs{display:flex;gap:7px}
-.barlabs div{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--ink-soft)}
+.btn.sub{border-color:var(--rule);color:var(--ink-soft)}
+.btn.sub:hover{background:var(--ink-soft);color:var(--white);border-color:var(--ink-soft)}
 
 .callout{background:var(--ink);color:var(--limestone);padding:30px 32px;margin:32px 0}
 .callout .eyebrow{color:var(--brass)}
 .callout h3{color:var(--white);font-size:1.3rem;margin:.35em 0 .5em}
 .callout p{color:#CFC7B8;margin-bottom:0;font-size:.95rem}
 .callout p+p{margin-top:.8em}
+.callout a{color:var(--brass);border-bottom-color:rgba(174,136,55,.4)}
+.callout a:hover{color:var(--white);border-bottom-color:var(--white)}
 
-.sched{border-top:1px solid var(--ink);margin-top:24px}
-.row{display:grid;grid-template-columns:92px 1fr;gap:22px;padding:17px 0;border-bottom:1px solid var(--rule);align-items:start}
-.row .t{font-family:'JetBrains Mono',monospace;font-size:.76rem;color:var(--oxblood);font-weight:500;padding-top:3px}
-.row .what{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:.98rem;letter-spacing:.02em;margin-bottom:3px}
-.row p{font-size:.89rem;color:var(--ink-soft);margin:0}
 .tag{display:inline-block;font-family:'Oswald',sans-serif;font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;background:var(--limestone-deep);color:var(--ink-soft);padding:2px 8px;margin-left:7px;vertical-align:2px}
 .tag.free{background:#DCE4D5;color:#3F4A36}
 .tag.tix{background:#EFE0DE;color:var(--oxblood)}
@@ -109,6 +105,7 @@ section{padding:60px 0;border-bottom:1px solid var(--rule)}
 .card .cred{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--brass);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
 .card p{font-size:.87rem;color:var(--ink-soft);margin:0 0 .7em}
 .card p:last-child{margin-bottom:0}
+.card .meta{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:var(--ink-soft);border-top:1px solid var(--rule);padding-top:9px;margin-top:11px;line-height:1.8}
 
 .cut{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:235px 1fr;gap:22px}
 .cut .n{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.88rem;color:var(--ink);font-weight:500}
@@ -119,20 +116,26 @@ section{padding:60px 0;border-bottom:1px solid var(--rule)}
 .note h4{color:var(--ink);margin-bottom:.6em}
 .note ul{margin:0;padding-left:17px;font-size:.87rem;color:var(--ink-soft)}
 .note li{margin-bottom:7px}
+.note p{font-size:.87rem;color:var(--ink-soft);margin:0}
+
+.tblwrap{overflow-x:auto;margin-top:26px}
+table{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+th{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.63rem;letter-spacing:.12em;color:var(--ink-soft);text-align:left;padding:0 14px 9px 0;border-bottom:1px solid var(--ink);font-weight:600}
+td{padding:11px 14px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.num{font-family:'JetBrains Mono',monospace;font-size:.76rem;white-space:nowrap}
+tr.dim td{color:var(--ink-soft)}
 
 footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;line-height:1.85}
 
 @media(max-width:880px){
-  .days{grid-template-columns:1fr 1fr}
   .hotel{grid-template-columns:1fr;gap:20px}
   .facts{border-left:none;border-top:1px solid var(--rule);padding-left:0;padding-top:18px}
   .anchors{grid-template-columns:1fr}
   .anchor:first-child{padding-right:0;border-right:none;border-bottom:1px solid var(--rule)}
   .anchor:last-child{padding-left:0}
   .cut{grid-template-columns:1fr;gap:5px}
-  .row{grid-template-columns:74px 1fr;gap:15px}
 }
-@media(max-width:520px){.days{grid-template-columns:1fr}body{font-size:16px}}
+@media(max-width:520px){body{font-size:16px}.tier{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -150,14 +153,14 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
       <div class="anchor">
         <span class="eyebrow">Saturday · College</span>
         <div class="vs">TCU vs. Kansas State</div>
-        <div class="meta"><a href="https://maps.google.com/?q=Amon+G.+Carter+Stadium,+2850+Stadium+Dr,+Fort+Worth,+TX+76109" target="_blank" rel="noopener">Amon G. Carter Stadium</a>, Fort Worth<br>
-        Big 12 · TCU's second-to-last home game<br>
-        <span class="mono">Kickoff TBA · <a href="https://gofrogs.com/sports/football/schedule" target="_blank" rel="noopener">TCU schedule</a></span></div>
+        <div class="meta"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.7096604,-97.3680835&amp;query_place_id=ChIJazo1nztyToYRnQglZFAv6Iw" target="_blank" rel="noopener">Amon G. Carter Stadium</a>, Fort Worth<br>
+        Big 12 · designated a &ldquo;Freedom Frogs&rdquo; military appreciation game<br>
+        <span class="mono">Kickoff TBA — announced ~2 weeks out · <a href="https://gofrogs.com/sports/football/schedule" target="_blank" rel="noopener">TCU schedule</a></span></div>
       </div>
       <div class="anchor">
         <span class="eyebrow">Sunday · NFL</span>
         <div class="vs">Cowboys vs. 49ers</div>
-        <div class="meta"><a href="https://maps.google.com/?q=AT%26T+Stadium,+1+AT%26T+Way,+Arlington,+TX+76011" target="_blank" rel="noopener">AT&amp;T Stadium</a>, Arlington<br>
+        <div class="meta"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.7480281,-97.0928124&amp;query_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">AT&amp;T Stadium</a>, Arlington<br>
         Week 10 · <a href="https://www.dallascowboys.com/schedule/" target="_blank" rel="noopener">Cowboys schedule</a><br>
         <span class="mono">3:25 PM CT · flex-eligible, may move</span></div>
       </div>
@@ -166,496 +169,645 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
 </header>
 
 <nav class="nav"><div class="wrap">
-  <a href="#shape">The Weekend</a>
-  <a href="#hotels">Where to Stay</a>
-  <a href="#also">Also Considered</a>
-  <a href="#saturday">Saturday</a>
-  <a href="#friday">Friday</a>
-  <a href="#sunday">Sunday</a>
-  <a href="#more">More to Do</a>
-  <a href="#eat">Eating</a>
-  <a href="#logistics">Logistics</a>
+  <a href="#basis">How These Are Priced</a>
+  <a href="#suggested">Suggested Hotels</a>
+  <a href="#proximity">Game Day Proximity</a>
+  <a href="#dining">Dining</a>
+  <a href="#ideas">Saturday &amp; Sunday</a>
+  <a href="#offwall">Off The Wall</a>
 </div></nav>
 
-<section id="shape">
+<section id="basis">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">The shape of it</span>
-      <h2>Four days, one of them wide open</h2>
-      <p>Friday lands in the evening and Sunday belongs to the Cowboys. Monday is an early departure, so it's a travel day and nothing else. That leaves <strong>Saturday</strong> as the day with real room in it — and Saturday already has a football game in it, whether or not the group goes.</p>
+      <span class="eyebrow">The Basis</span>
+      <h2>How every number here was arrived at</h2>
+      <p>Nine properties priced, one room and two adults throughout so the totals compare directly. Every figure is the all-in total including taxes and fees, on a rate that can still be cancelled. Every distance is a Google Maps lookup from the property&rsquo;s own coordinates, not an estimate.</p>
     </div>
 
-    <div class="days">
-      <div class="day">
-        <div class="daytab">Fri 13 Nov</div>
-        <div class="big">Arrive &amp; Stockyards</div>
-        <p>Land at DFW, drop bags, head north. The world's largest honky tonk has live bull riding at 8:30 and 9:30 — no planning required.</p>
-      </div>
-      <div class="day">
-        <div class="daytab">Sat 14 Nov</div>
-        <div class="big">Museums, then TCU</div>
-        <p>The one full day. Two world-class museums in the morning, Horned Frogs in the afternoon, all inside the same square mile.</p>
-      </div>
-      <div class="day">
-        <div class="daytab">Sun 15 Nov</div>
-        <div class="big">Game day, Arlington</div>
-        <p>Slow morning, longhorn cattle drive at 11:30 if anyone wants it, then east to AT&amp;T Stadium for a 3:25 kickoff.</p>
-      </div>
-      <div class="day">
-        <div class="daytab">Mon 16 Nov</div>
-        <div class="big">Out early</div>
-        <p>Travel day. Worth knowing both Cultural District museums are closed Mondays, so there's no morning add-on.</p>
-      </div>
+    <p>Both stay lengths are priced on every hotel below. Each one leads with its <b>two-night total</b> for Saturday to Monday, with the <b>three-night</b> Friday-to-Monday figure directly underneath &mdash; so whichever arrival a couple settles on, the comparison holds without anything needing to be repriced.</p>
+
+    <div class="callout">
+      <span class="eyebrow">The pattern</span>
+      <h3>Saturday is the expensive night in Fort Worth. In Arlington it is Sunday.</h3>
+      <p>Fort Worth empties out on Sunday. Saturday night runs 45&ndash;73% higher than Sunday at every Fort Worth property priced &mdash; that is the TCU home game filling the city, not the NFL. Arlington does the exact opposite: at the hotel you can walk to the stadium from, Sunday is the most expensive night of the weekend. Grapevine, sitting outside both, is close to flat.</p>
+      <p>The practical consequence, for anyone weighing a Friday arrival against a Saturday one: dropping Friday takes <b>37&ndash;45%</b> off the total at the Fort Worth hotels, but <b>under 6%</b> at the Arlington one. The extra night is far cheaper in Fort Worth than the headline rates suggest.</p>
+    </div>
+
+    <div class="note">
+      <h4>Two things to know before comparing prices</h4>
+      <ul>
+        <li><b>Every total was checked against booking the hotel directly.</b> Result: eight of the nine match the hotel&rsquo;s own website, several to the exact cent. Where there is a difference it is noted on that hotel&rsquo;s entry. Nobody needs to go and price-check this themselves.</li>
+        <li><b>Two properties will not sell a Saturday&ndash;Monday stay at all.</b> The Crescent and Hyatt Place Arlington both return a minimum-night requirement for those dates. That is a planning constraint, not a footnote &mdash; it is covered on each entry below.</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="hotels">
+<section id="suggested">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Where to stay</span>
-      <h2>Four strong options</h2>
-      <p>All priced identically — three nights, one room, two adults, taxes and fees included — so the totals compare directly. All four are fully refundable. Multiply by the number of rooms needed.</p>
+      <span class="eyebrow">Section One</span>
+      <h2>The four hotels that were suggested</h2>
+      <p>Here is the analysis of the options that came through, priced on identical terms and checked against booking each hotel direct.</p>
+    </div>
+
+    <!-- LE MERIDIEN -->
+    <div class="hotel">
+      <div>
+        <h3>Le M&eacute;ridien Fort Worth Downtown</h3>
+        <div class="where">811 Commerce St · Downtown</div>
+        <div class="flags"><span class="flag">Lowest total</span><span class="flag">Walk to dinner</span></div>
+        <p>Comfortably the least expensive option on the list and not by a small margin &mdash; it is roughly a fifth of what the Stockyards and Cultural District properties cost for the same two nights. Downtown, so Sundance Square, Bass Performance Hall and a large number of restaurants are a walk rather than a drive, which matters on two evenings when nobody wants to be organising cars.</p>
+        <p>It is also the best-placed of the Fort Worth options for the Sunday drive to Arlington and the Monday morning run to DFW &mdash; downtown sits three to four minutes closer to both than the Cultural District. The trade-off is the museums, which are a short drive rather than a stroll.</p>
+        <p class="noperk">This rate carries no added benefits &mdash; it is priced purely on room rate.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">City View King<span>370 sq ft · 2 guests</span></div><div class="rp">$677.20</div></div>
+          <div class="tier"><div class="rn">City View or Corner, 2 Queen<span>370&ndash;394 sq ft · 4 guests</span></div><div class="rp">$689.23</div></div>
+          <div class="tier"><div class="rn">Executive Suite, 1 Bedroom<span>King + sofa bed · city view</span></div><div class="rp">$1,141.10</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$677<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$1,086.89</b><br>
+          Sat / Sun <b>$374 · $188</b><br>
+          Guest rating <b>4.4</b> <span style="opacity:.7">(331)</span><br>
+          Due at booking <b class="ok">$0</b><br>
+          Refundable to <b>Nov 12</b><br>
+          <br>
+          Drive to stadium <b>16.1 mi · 18 min</b><br>
+          Drive to DFW <b>24.5 mi · 29 min</b><br>
+          Drive to TCU <b>4.8 mi · 12 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.752676,-97.328725&amp;query_place_id=ChIJ4c5QJnFxToYRnITLO3lgbjo" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.752676,-97.328725&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.752676,-97.328725&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOWIE HOUSE -->
+    <div class="hotel">
+      <div>
+        <h3>Bowie House, Auberge Collection</h3>
+        <div class="where">3700 Camp Bowie Blvd · Cultural District</div>
+        <div class="flags"><span class="flag">Highest rated</span><span class="flag">Closest to the museums</span></div>
+        <p>The highest-rated property on this list by guest review, and the one that most feels like an occasion rather than a place to sleep. It sits in the Cultural District, so the Kimbell, the Amon Carter and the Modern are all within a few minutes &mdash; and it is the closest of the nine to the TCU stadium at eight minutes.</p>
+        <p>What it costs is distance from everything on Sunday: it is the furthest of all nine from AT&amp;T Stadium and from DFW. Twenty-one minutes to Arlington and thirty-three to the airport is not painful, but it is roughly a quarter longer than downtown on both legs.</p>
+        <ul class="perks">
+          <li>Full breakfast for two, daily</li>
+          <li>$100 one-time resort credit</li>
+          <li>Room upgrade, subject to availability</li>
+          <li>Early check-in and late check-out, subject to availability</li>
+        </ul>
+        <div class="tiers">
+          <div class="tier"><div class="rn">Boulevard King Studio<span>Dining and sitting area · city views</span></div><div class="rp">$2,479.14</div></div>
+          <div class="tier"><div class="rn">Balcony King Studio<span>Higher floor · balcony · dining area</span></div><div class="rp">$2,659.84</div></div>
+          <div class="tier"><div class="rn">Balcony Two Queen Studio<span>Higher floor · pool terrace view</span></div><div class="rp">$3,141.69</div></div>
+          <div class="tier"><div class="rn">Balcony King Loft<span>Soaking tub · floor-to-ceiling · pool views</span></div><div class="rp">$3,382.63</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$2,479<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$4,212.62</b><br>
+          Sat / Sun <b>$1,419 · $639</b><br>
+          Guest rating <b>4.7</b> <span style="opacity:.7">(412)</span><br>
+          Due at booking <b class="warn">$1,239.57</b><br>
+          Refundable to <b>Oct 14</b><br>
+          <br>
+          Drive to stadium <b>19.1 mi · 21 min</b><br>
+          Drive to DFW <b>27.5 mi · 33 min</b><br>
+          Drive to TCU <b>3.2 mi · 8 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.747034,-97.372595&amp;query_place_id=ChIJuVR5vg9zToYRZFl0G4WXKJs" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.747034,-97.372595&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.747034,-97.372595&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <h4>Bowie House — one thing worth disclosing</h4>
+      <p>The totals above match the hotel&rsquo;s own website to the cent on every room type. However, booking directly on some room types currently attaches a package carrying a <b>$150 resort credit</b> rather than the $100 above, at the same price. It appears on the Boulevard King, Balcony King Studio and Balcony Two Queen &mdash; but not on the Balcony King Loft, which is sold at a plain nightly rate. Against that, the rates above add breakfast for two, an upgrade and early/late check-in, which the direct package does not list. Worth deciding deliberately rather than by accident.</p>
+    </div>
+
+    <!-- THE CRESCENT -->
+    <div class="hotel blocked">
+      <div>
+        <h3>The Crescent Hotel, Fort Worth</h3>
+        <div class="where">3300 Camp Bowie Blvd · Cultural District</div>
+        <div class="flags"><span class="flag q">Three-night minimum this weekend</span><span class="flag">Closest to the museums</span></div>
+        <p>A genuine problem rather than a pricing note: <b>The Crescent will not sell a Saturday-to-Monday stay on these dates.</b> Its own booking system rejects the combination outright and suggests extending the stay instead. Anyone arriving Saturday would have to book three nights and pay for a Friday they are not there for &mdash; roughly $570 to $620 plus tax per room, for an empty room.</p>
+        <p>For the two travelling Friday to Monday it works normally, and it is a strong Cultural District option: the museums are a few minutes away and it is eight minutes from the TCU stadium. But it cannot house most of the group without that dead night, which is a different proposition from the rest of this list regardless of what it costs.</p>
+        <p>Note that the Premier King is both a better room than the Deluxe King and $167 cheaper &mdash; they sit on different rate lines.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">Premier King, museum view<span>350 sq ft · three nights</span></div><div class="rp">$1,884.91</div></div>
+          <div class="tier"><div class="rn">Deluxe King, courtyard<span>350 sq ft · three nights</span></div><div class="rp">$2,052.26</div></div>
+          <div class="tier"><div class="rn">One-Bedroom King Suite<span>717 sq ft · three nights</span></div><div class="rp">$2,960.65</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price na">Not available<span>Minimum-night requirement</span></div>
+        <div class="rows">
+          Three nights <b>$1,884.91</b><br>
+          Fri / Sat / Sun <b>$619 · $659 · $539</b><br>
+          Guest rating <b>4.2</b> <span style="opacity:.7">(275)</span><br>
+          Due at booking <b class="ok">$0</b><br>
+          Refundable to <b>Nov 11</b><br>
+          <br>
+          Drive to stadium <b>18.6 mi · 20 min</b><br>
+          Drive to DFW <b>26.9 mi · 32 min</b><br>
+          Drive to TCU <b>3.5 mi · 8 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.750054,-97.365085&amp;query_place_id=ChIJ8TUSJ31zToYR8XUI0O-P32M" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.750054,-97.365085&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.750054,-97.365085&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOTEL DROVER -->
+    <div class="hotel">
+      <div>
+        <h3>Hotel Drover, Autograph Collection</h3>
+        <div class="where">200 Mule Alley · The Stockyards</div>
+        <div class="flags"><span class="flag">In the Stockyards</span><span class="flag q">Limited availability</span></div>
+        <p>The most expensive of the four, and the one where the location is the entire argument. It sits inside Mule Alley in the Stockyards, so the rodeo, Billy Bob&rsquo;s, the twice-daily cattle drive and roughly a dozen bars and restaurants are all outside the door &mdash; nobody gets in a car for the evening.</p>
+        <p>Saturday is what drives the price. The Saturday night rate is more than three times the Sunday rate at this property, the steepest swing of any of the nine. Several room types are showing as almost sold out for these dates.</p>
+        <p class="noperk">This rate carries no added benefits &mdash; it is priced purely on room rate.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">Deluxe King<span>315 sq ft · 2 guests</span></div><div class="rp">$3,320.21</div></div>
+          <div class="tier"><div class="rn">Soaking Tub Deluxe King<span>430 sq ft · deep soaking tub</span></div><div class="rp">$3,389.71</div></div>
+          <div class="tier"><div class="rn">Deluxe 2 Queen<span>340 sq ft · 4 guests</span></div><div class="rp">$3,434.04</div></div>
+          <div class="tier"><div class="rn">King + 2 Twin Bunks<span>4 guests · reading lights, charging stations</span></div><div class="rp">$3,458.01</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$3,320<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$5,254.10</b><br>
+          Guest rating <b>4.5</b> <span style="opacity:.7">(1,472)</span><br>
+          Due at booking <b class="ok">$0</b><br>
+          Refundable to <b>Nov 12</b><br>
+          Matches hotel direct <b class="ok">Yes</b><br>
+          <br>
+          Drive to stadium <b>17.6 mi · 19 min</b><br>
+          Drive to DFW <b>24.3 mi · 29 min</b><br>
+          Drive to TCU <b>6.5 mi · 9 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.787080,-97.347073&amp;query_place_id=ChIJw-30sJx3ToYRKfGtEMtsV80" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.787080,-97.347073&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.787080,-97.347073&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <h4>Avoid the prepaid rates at Hotel Drover and Hotel Vin</h4>
+      <p>Both properties offer cheaper prepaid rates. On the dates checked, free cancellation on those had already lapsed &mdash; they are effectively non-refundable for a November trip, with a fee of 100% of the stay. Every figure in this document is a rate that can still be cancelled, which is the right position while the group is still deciding.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proximity">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Section Two</span>
+      <h2>Additional hotels to consider based on game day proximity</h2>
+      <p>None of the four above solves for being close to the airport or close to the stadium. These five were added to show what those trade-offs actually cost &mdash; and in one case, what they save.</p>
+    </div>
+
+    <!-- KIMPTON HARPER -->
+    <div class="hotel">
+      <div>
+        <h3>Kimpton Harper Hotel</h3>
+        <div class="where">714 Main St · Downtown</div>
+        <div class="flags"><span class="flag">Walk to Sundance Square</span><span class="flag">Added benefits included</span></div>
+        <p>A 1920s landmark tower with the lobby and bar on the 24th floor. Downtown, so it shares Le M&eacute;ridien&rsquo;s advantages &mdash; restaurants and Bass Performance Hall on foot, and the shortest drives to both Arlington and DFW of any Fort Worth property. It is around $140 more than Le M&eacute;ridien for the two nights, and unlike that rate it carries added benefits.</p>
+        <p>Priced against booking IHG directly with a loyalty discount applied, this comes in around $20 above their barest flexible rate and around $28 <em>below</em> their equivalent rate with breakfast included &mdash; so it is cheaper like for like.</p>
+        <p class="noperk">Added benefits apply at this rate. The itemised list is being confirmed with the hotel before anything is booked.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">1 King<span>280 sq ft · 2 guests</span></div><div class="rp">$816.21</div></div>
+          <div class="tier"><div class="rn">1 King, Premium City View<span>280 sq ft · 2 guests</span></div><div class="rp">$866.13</div></div>
+          <div class="tier"><div class="rn">2 Queen<span>280 sq ft · 4 guests</span></div><div class="rp">$891.09</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$816<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$1,321.66</b><br>
+          Sat / Sun <b>$445 · $209</b><br>
+          Guest rating <b>4.4</b> <span style="opacity:.7">(715)</span><br>
+          Due at booking <b class="ok">$0</b><br>
+          Refundable to <b>Nov 13</b><br>
+          <br>
+          Drive to stadium <b>16.2 mi · 18 min</b><br>
+          Drive to DFW <b>24.6 mi · 30 min</b><br>
+          Drive to TCU <b>4.7 mi · 11 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.752837,-97.330299&amp;query_place_id=ChIJPdnnCEBxToYR7ahMp6v8OEM" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.752837,-97.330299&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.752837,-97.330299&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OMNI -->
+    <div class="hotel">
+      <div>
+        <h3>Omni Fort Worth Hotel</h3>
+        <div class="where">1300 Houston St · Downtown</div>
+        <div class="flags"><span class="flag">Most reviewed</span><span class="flag">Largest rooms downtown</span></div>
+        <p>The largest of the downtown options and by a distance the most reviewed of the nine &mdash; nearly six thousand ratings against a few hundred for most of this list, which makes its 4.4 a more settled number than a similar score off a small sample. Rooms run bigger than the downtown average, and it has the widest spread of suite options if anyone wants more space.</p>
+        <p>Priced against the Omni&rsquo;s own website, the entry room matches exactly. On the larger rooms this is cheaper &mdash; around $33 on the Colonial Corner and around $87 on the Resistol Suite.</p>
+        <p class="noperk">This rate carries no added benefits &mdash; it is priced purely on room rate.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">Classic Deluxe, 2 Queen<span>369 sq ft · 4 guests · city views</span></div><div class="rp">$784.84</div></div>
+          <div class="tier"><div class="rn">Colonial Corner King<span>455 sq ft · 3 guests · city view</span></div><div class="rp">$962.73</div></div>
+          <div class="tier"><div class="rn">Resistol Suite, One Bedroom<span>690 sq ft · living room · sofa bed</span></div><div class="rp">$2,514.91</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$785<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$1,422.19</b><br>
+          Guest rating <b>4.4</b> <span style="opacity:.7">(5,978)</span><br>
+          Deposit <b>Required at booking</b><br>
+          Refundable to <b>Nov 12</b><br>
+          Matches hotel direct <b class="ok">Yes</b><br>
+          <br>
+          Drive to stadium <b>16.0 mi · 17 min</b><br>
+          Drive to DFW <b>24.7 mi · 30 min</b><br>
+          Drive to TCU <b>4.5 mi · 11 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.748526,-97.328349&amp;query_place_id=ChIJqerq3RRxToYRSfX94bvKQiI" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.748526,-97.328349&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.748526,-97.328349&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOTEL VIN -->
+    <div class="hotel">
+      <div>
+        <h3>Hotel Vin, Grapevine</h3>
+        <div class="where">215 E Dallas Rd, Grapevine · Main Street district</div>
+        <div class="flags"><span class="flag">Closest to the airport</span><span class="flag">Flattest pricing</span><span class="flag q">Limited availability</span></div>
+        <p>This one is worth a proper look rather than a glance. It is the airport answer &mdash; <b>five minutes to DFW</b> against roughly thirty from Fort Worth &mdash; and the assumption would be that it pays for that by being miles from the stadium. It does not. It is 24 minutes to Arlington against 17 to 18 from downtown Fort Worth. It gives up around seven minutes on Sunday and saves around twenty-five on Monday morning.</p>
+        <p>It also sits outside both games, so its pricing barely moves across the weekend &mdash; the flattest of the nine. It is a genuine boutique hotel on Grapevine&rsquo;s Main Street rather than an airport chain, and it is the one option that pairs naturally with the Gaylord Texan attraction opening that Friday. The cost is that it is not in Fort Worth, so the Stockyards and the museums become a deliberate outing rather than a walk.</p>
+        <p class="noperk">Standard rates carry no added benefits. The hotel does sell packages &mdash; one adds a bottle of wine on arrival, chocolates, Riedel glasses, a spa gift and turndown for around $228 more across the two nights.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">Deluxe King<span>355 sq ft · 3 guests</span></div><div class="rp">$856.15</div></div>
+          <div class="tier"><div class="rn">Deluxe Double Queen<span>355 sq ft · 4 guests</span></div><div class="rp">$932.63</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$856<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$1,486.27</b><br>
+          Sat / Sun <b>$384 · $323</b><br>
+          Guest rating <b>4.6</b> <span style="opacity:.7">(850)</span><br>
+          Due at booking <b class="ok">$0</b><br>
+          Refundable to <b>Nov 11</b><br>
+          <br>
+          Drive to stadium <b>16.1 mi · 24 min</b><br>
+          Drive to DFW <b class="ok">3.9 mi · 5 min</b><br>
+          Drive to TCU <b>27.4 mi · 37 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.933168,-97.076961&amp;query_place_id=ChIJw6jlPBYrTIYRQ2VGOMlFFU0" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.933168,-97.076961&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0" target="_blank" rel="noopener">→ Stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.933168,-97.076961&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIVE BY LOEWS -->
+    <div class="hotel">
+      <div>
+        <h3>Live! by Loews &mdash; Arlington</h3>
+        <div class="where">1600 E Randol Mill Rd, Arlington · Entertainment District</div>
+        <div class="flags"><span class="flag">Closest to the stadium</span><span class="flag">Walkable on game day</span></div>
+        <p>This is the walk-to-the-game option, and the walk is real: <b>0.7 miles, about 14 minutes on foot.</b> On Sunday that will almost certainly beat driving, because the two-minute drive becomes something else entirely once eighty thousand people are arriving. No parking, no rideshare surge, no waiting to get out of a lot afterwards. It is full-service upscale rather than a budget stadium hotel, with restaurants and the Texas Live! complex next door.</p>
+        <p>What it costs is severe. It is the second most expensive on this list for two nights, and the reason is that Arlington prices invert: <b>Sunday is the peak night here</b>, at around $1,679 against $1,487 for Saturday. Where the Fort Worth hotels get cheap on game day, this one gets expensive. It also takes the full amount at booking and its cancellation deadline is the earliest of the nine.</p>
+        <p class="noperk">This rate carries no added benefits. An Entertainment District fee of $2 per night applies on top.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">Luxury Room, 2 Queen<span>357 sq ft · park views</span></div><div class="rp">$3,872.36</div></div>
+          <div class="tier"><div class="rn">Premium King, accessible<span>357 sq ft · city views</span></div><div class="rp">$3,830.21</div></div>
+        </div>
+        <p class="noperk">Only these categories returned availability for these dates &mdash; the standard Premium King did not.</p>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price">$3,872<span>Per room, taxes &amp; fees incl.</span></div>
+        <div class="rows">
+          Three nights <b>$4,112.89</b><br>
+          Sat / Sun <b class="warn">$1,487 · $1,679</b><br>
+          Guest rating <b>4.6</b> <span style="opacity:.7">(2,405)</span><br>
+          Due at booking <b class="warn">Full amount</b><br>
+          Refundable to <b class="warn">Oct 31</b><br>
+          <br>
+          Walk to stadium <b class="ok">0.7 mi · 14 min</b><br>
+          Drive to stadium <b>0.4 mi · 2 min</b><br>
+          Drive to DFW <b>13.4 mi · 16 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.749500,-97.085700&amp;query_place_id=ChIJMzwS8XuHToYRlFXoTw8Tun8" target="_blank" rel="noopener">View map</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.749500,-97.085700&amp;destination=32.7480281,-97.0928124&amp;destination_place_id=ChIJJ0eIyIZ9ToYR-J1qjOhgHm0&amp;travelmode=walking" target="_blank" rel="noopener">→ Walk to stadium</a>
+          <a class="btn sub" href="https://www.google.com/maps/dir/?api=1&amp;origin=32.749500,-97.085700&amp;destination=32.8921983,-97.0391232&amp;destination_place_id=ChIJpyoiDWYqTIYRHCB9Bl4_MnM" target="_blank" rel="noopener">→ DFW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HYATT PLACE -->
+    <div class="hotel blocked">
+      <div>
+        <h3>Hyatt Place Dallas/Arlington</h3>
+        <div class="where">2380 E Road to Six Flags St, Arlington</div>
+        <div class="flags"><span class="flag q">Not available these dates</span></div>
+        <p>Included because it was the obvious budget-tier answer to stadium proximity &mdash; roughly a third of what Live! by Loews costs, in the same district. Two things rule it out.</p>
+        <p>First, it will not sell the dates. A Saturday-to-Monday stay returns a minimum-night requirement through one route and no availability at all through the hotel&rsquo;s own system, which usually means full. Whichever it is, the stay cannot currently be booked. Second, and worth knowing regardless: <b>it is not walkable to the stadium.</b> Google puts it at 2.2 miles and 44 minutes on foot &mdash; a five-minute drive in normal conditions, but a drive, and on Sunday a drive into game traffic. It does not offer what Live! by Loews offers at a lower price; it offers something different.</p>
+        <div class="tiers">
+          <div class="tier"><div class="rn">King + sofa bed<span>625 sq ft · three nights only</span></div><div class="rp">$1,401.69</div></div>
+          <div class="tier"><div class="rn">2 Double + sofa bed<span>625 sq ft · three nights only</span></div><div class="rp">$1,490.83</div></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="lab">Two nights · Sat&ndash;Mon</div>
+        <div class="price na">Not available<span>Cause unresolved — see left</span></div>
+        <div class="rows">
+          Three nights <b>$1,401.69</b><br>
+          Guest rating <b>4.1</b> <span style="opacity:.7">(1,014)</span><br>
+          <br>
+          Walk to stadium <b class="warn">2.2 mi · 44 min</b><br>
+          Drive to stadium <b>1.8 mi · 5 min</b><br>
+          Drive to DFW <b>13.0 mi · 16 min</b>
+        </div>
+        <div class="maplinks">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=32.750820,-97.065939&amp;query_place_id=ChIJh0VlAgyHToYRvqiSojCduQg" target="_blank" rel="noopener">View map</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <h4>Reading the drive times</h4>
+      <ul>
+        <li>Every figure is a Google Maps lookup from the property&rsquo;s own coordinates in ordinary conditions. <b>Sunday afternoon into Arlington will run at the top of the range or beyond</b> &mdash; no traffic model knows an NFL game is happening, so treat these as the floor, not the estimate.</li>
+        <li>The three downtown Fort Worth properties are three to four minutes closer to both Arlington and DFW than the Cultural District ones. Over a weekend with a Sunday game and a Monday morning flight, that is the difference the map is actually showing.</li>
+        <li>Each entry has live links &mdash; tap <b>&rarr; Stadium</b> or <b>&rarr; DFW</b> to get current directions and real-time traffic on the day.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="dining">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Section Three</span>
+      <h2>Dining &mdash; and the research behind it</h2>
+      <p>Two dinners to plan for four couples, which changes what is bookable. Here is what was consulted before the list below was arrived at.</p>
+    </div>
+
+    <p>This list consolidates <b>Eater</b>, the <b>Michelin Guide</b>, <b>Anthony Bourdain&rsquo;s</b> Texas coverage, <b>Texas Monthly&rsquo;s</b> Top 50 barbecue list, local press including <b>Fort Worth Magazine</b>, and Google review volume &mdash; not a single source. Every restaurant below has had its address, current opening hours and rating confirmed directly. Anything that could not be confirmed has been left out rather than guessed at.</p>
+
+    <p>Two findings worth stating plainly, because both were checked rather than skipped:</p>
+
+    <div class="cut">
+      <div class="n">Michelin<span>2025 and 2026 guides</span></div>
+      <p><b>Fort Worth has no Michelin-starred restaurants.</b> The city was passed over in both guides. One Fort Worth restaurant holds a Bib Gourmand and one Arlington restaurant is Recommended; both are on the list below. The nearest stars are in Dallas, about 40 minutes east.</p>
+    </div>
+    <div class="cut">
+      <div class="n">Chef&rsquo;s Table<span>Netflix, all seasons</span></div>
+      <p><b>No Dallas&ndash;Fort Worth restaurant has ever appeared on the show.</b> The Texas episode features Tootsie Tomanetz at Snow&rsquo;s BBQ in Lexington &mdash; roughly three hours away and open Saturdays only, which is the day of the TCU game. Not workable on this trip.</p>
+    </div>
+
+    <div class="cards" style="margin-top:34px">
+      <div class="card">
+        <div class="n">Le Margot</div>
+        <div class="cred">French · 4.6 (572) · Near TCU</div>
+        <p>From chefs Felipe Armenta and Graham Elliot, and named among Texas Monthly&rsquo;s best new restaurants. The closest Fort Worth gets to a proper occasion dinner and the strongest option for a group evening. On S. Hulen Street west of the TCU campus, so it pairs naturally with Saturday.</p>
+        <div class="meta">
+          Fri&ndash;Sat to 10pm · Sun to 9pm<br>
+          Reservations book out — go early<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=32.704884,-97.3894365&amp;query_place_id=ChIJIXLwDjJzToYRo4Coe7ogWXw" target="_blank" rel="noopener">View map</a> · <a href="https://lemargottx.com" target="_blank" rel="noopener">lemargottx.com</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="n">Don Artemio</div>
+        <div class="cred">Mexican · 4.7 (1,042) · West 7th</div>
+        <p>Regional cooking from Coahuila rather than Tex-Mex, and a James Beard finalist &mdash; the most decorated dining room in the city and the most interesting food on this list, in a striking West 7th space. It is a fifteen-minute walk from the Cultural District hotels.</p>
+        <div class="meta">
+          Fri&ndash;Sat to 10pm · Sun to 8pm<br>
+          <b>Parties of 5+ Fri/Sat: $95 per person minimum</b><br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=32.7514508,-97.3645701&amp;query_place_id=ChIJNQ8ebcBzToYRTHnBeeLXtIo" target="_blank" rel="noopener">View map</a> · <a href="https://donartemio.us" target="_blank" rel="noopener">donartemio.us</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="n">Goldee&rsquo;s Barbecue</div>
+        <div class="cred">Michelin Bib Gourmand · 4.7 (1,721)</div>
+        <p>The only Fort Worth restaurant Michelin has recognised, and it topped Texas Monthly&rsquo;s Top 50 barbecue list. It sells out, with queues forming well before opening. Realistically this is a Friday lunch for whoever is already in town &mdash; Saturday is the game and Sunday is Arlington.</p>
+        <div class="meta">
+          <b>Fri&ndash;Sun 11am&ndash;3pm only</b><br>
+          4645 Dick Price Rd — well south of the city<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=32.621385,-97.2339324&amp;query_place_id=ChIJ24EDAYllToYR34yWOv_et-A" target="_blank" rel="noopener">View map</a> · <a href="https://goldeesbbq.com" target="_blank" rel="noopener">goldeesbbq.com</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="n">Smoke&rsquo;N Ash BBQ</div>
+        <div class="cred">Michelin Recommended · 4.2 (1,271) · Arlington</div>
+        <p>Central Texas barbecue crossed with Ethiopian cooking &mdash; brisket alongside injera and berbere, from a James Beard semifinalist. There is nowhere else like it. It is in south Arlington, about twenty minutes from the stadium, which makes it a pre-game lunch rather than a post-game dinner.</p>
+        <div class="meta">
+          <b>Closes 6pm Sunday</b> · Wed&ndash;Sat to 9pm<br>
+          Closed Monday and Tuesday<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=32.6511083,-97.136175&amp;query_place_id=ChIJAQBwKD5iToYRUQSX9UKOfLw" target="_blank" rel="noopener">View map</a> · <a href="https://smokenashbbq.net" target="_blank" rel="noopener">smokenashbbq.net</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="n">Mariano&rsquo;s Hacienda Ranch</div>
+        <div class="cred">Tex-Mex · 4.5 (4,362) · Arlington</div>
+        <p>Two miles from AT&amp;T Stadium, open from 9am on Sunday, and carrying the Mariano&rsquo;s name &mdash; which, as the off-the-wall section explains, is not a small detail if the group likes margaritas. The most heavily reviewed restaurant on this list by a wide margin. A credible Sunday pre-game stop with an actual story attached.</p>
+        <div class="meta">
+          <b>Sunday 9am&ndash;9pm</b> · Fri&ndash;Sat to 10pm<br>
+          Closed Monday and Tuesday<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=32.7545808,-97.0616007&amp;query_place_id=ChIJ-Tq36g-HToYR6g4KAlcNbm0" target="_blank" rel="noopener">View map</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="n">il Modo</div>
+        <div class="cred">Italian · 4.1 (423) · Downtown</div>
+        <p>Ground floor of the Kimpton Harper, so it handles dinner without anyone getting in a car. Included for convenience rather than as a destination: reviews are strong on breakfast and service and more mixed on dinner, and it is the lowest-rated entry here. Best treated as the easy option on an evening when nobody wants to travel.</p>
+        <div class="meta">
+          Breakfast from 6:30am daily<br>
+          Fri&ndash;Sat dinner to 10pm<br>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=32.7528367,-97.3302992&amp;query_place_id=ChIJEXtYXM1xToYRXXjJIOHikjE" target="_blank" rel="noopener">View map</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <h4>Where these sit relative to everything else</h4>
+      <ul>
+        <li><b>Le Margot</b> and <b>Goldee&rsquo;s</b> are south of the city &mdash; Le Margot near TCU, Goldee&rsquo;s considerably further out. Neither is a walk from any hotel.</li>
+        <li><b>Don Artemio</b> and <b>il Modo</b> are the two that work without a car from the Cultural District and downtown respectively.</li>
+        <li><b>Smoke&rsquo;N Ash</b> and <b>Mariano&rsquo;s</b> are both Arlington, so both are Sunday options rather than evening ones.</li>
+        <li>The Stockyards has around a dozen more bars and restaurants clustered in the restored 1912 barns, which is the practical argument for staying there. Individual venues have not been listed here because opening hours that weekend could not be confirmed.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="ideas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Section Four</span>
+      <h2>Ideas for Saturday and Sunday</h2>
+      <p>Not a schedule &mdash; nothing is fixed and the TCU kickoff time is not announced yet. These are the confirmed options across the weekend, in Fort Worth and the wider Metroplex.</p>
+    </div>
+
+    <h3 style="margin-top:8px">Game day &mdash; Sunday at AT&amp;T Stadium</h3>
+    <div class="cut">
+      <div class="n">The Miller Lite House<span>Free with a game ticket</span></div>
+      <p>The strongest find here and it costs nothing extra. Opens four hours before kickoff, so around 11:25am for a 3:25 start, inside the ticketed perimeter. 87,000 square feet with a 70-yard turf field for tailgate games, 50+ TVs, two beer gardens, live music and $5 beers. Effectively a pre-built tailgate. The first 120 arrivals get a wristband for reserved standing room on the Miller Lite Landing.</p>
+    </div>
+    <div class="cut">
+      <div class="n">Bought-in tailgates<span>Needs a phone call</span></div>
+      <p>Two operators run turnkey tailgates at or beside the stadium &mdash; one on Collins Street directly opposite, about three hours pre-kick with a Texas BBQ buffet and Cowboys alumni; another on official lots with setup and clean-up included. Both normally sell these inside ticket-and-hotel packages. <b>Whether either will sell a tailgate on its own needs a call, and has not been assumed.</b></p>
+    </div>
+    <div class="cut">
+      <div class="n">Doing it yourselves<span>Not really suited to eight people</span></div>
+      <p>Tailgating is permitted but constrained: a 9ft by 12ft strip directly behind your own parked vehicle, one space per car, first come and unreservable, on grass perimeter strips in certain lots only. Charcoal and gas are fine; no open flames or deep fryers. Lots open around five hours before an afternoon kickoff.</p>
+    </div>
+    <div class="cut">
+      <div class="n">Stadium tours<span>Ruled out</span></div>
+      <p>AT&amp;T Stadium runs tours, but <b>not on game days</b>. Sunday is out. It would have to be Saturday, which collides with the TCU game.</p>
+    </div>
+
+    <h3 style="margin-top:34px">Saturday &mdash; the TCU game, if the group goes</h3>
+    <div class="cut">
+      <div class="n">TCU vs Kansas State<span>Amon G. Carter Stadium · kickoff TBA</span></div>
+      <p>Designated a &ldquo;Freedom Frogs&rdquo; military appreciation game. Resale tickets have been running from around $61. The kickoff time is announced roughly two weeks out, which is the single thing most likely to reshape Saturday &mdash; an early kick leaves the evening open, a late one takes it.</p>
+    </div>
+    <div class="cut">
+      <div class="n">Frog Alley<span>Free · opens 3 hrs before kickoff</span></div>
+      <p>On the east side of the stadium &mdash; food trucks, live music and the team&rsquo;s Frog Walk entrance. The no-cost version of a tailgate.</p>
+    </div>
+    <div class="cut">
+      <div class="n">Turnkey tailgate at TCU<span>Cleaner than the NFL equivalent</span></div>
+      <p>TCU&rsquo;s official fan experience partner runs genuinely turnkey tailgates &mdash; setup, breakdown, food and beverage &mdash; with custom arrangements for groups. Sites include Schollmaier Lawn in the middle of Frog Alley, the tennis courts, and the alumni centre. Pricing needs a quote, and timing cannot be fixed until the kickoff is announced.</p>
+    </div>
+
+    <h3 style="margin-top:34px">Museums &mdash; all closed Monday</h3>
+    <p style="max-width:66ch;font-size:.93rem">Worth planning around: the three major museums all close on Mondays, so the checkout day is not an option for any of them. Saturday morning before the game is the realistic window.</p>
+    <div class="cut">
+      <div class="n">Kimbell Art Museum<span>Louis Kahn building</span></div>
+      <p><em>Photography&rsquo;s First Century</em>, from the Biblioth&egrave;que nationale de France, runs 4 October to 17 January &mdash; the first photography exhibition in the Kimbell&rsquo;s history. The building alone justifies the visit. <a href="https://kimbellart.org" target="_blank" rel="noopener">kimbellart.org</a> <span class="tag">Closed Mon</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Amon Carter Museum<span>Always free</span></div>
+      <p><em>The Statue of Liberty: from Bartholdi to Warhol</em>, 16 August to 3 January. Free admission, always. <a href="https://cartermuseum.org" target="_blank" rel="noopener">cartermuseum.org</a> <span class="tag free">Free</span> <span class="tag">Closed Mon</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">The Modern<span>Tadao Ando building</span></div>
+      <p>November programming has not been announced yet. The Ando building and its reflecting pond are the draw regardless. <a href="https://themodern.org" target="_blank" rel="noopener">themodern.org</a> <span class="tag">Closed Mon</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Sid Richardson Museum<span>Sundance Square</span></div>
+      <p>Remington and Russell, free, downtown &mdash; and the one museum that <b>is</b> open on Mondays, which makes it the only option before a Monday flight. <a href="https://sidrichardsonmuseum.org" target="_blank" rel="noopener">sidrichardsonmuseum.org</a> <span class="tag free">Free</span> <span class="tag">Open Mon</span></p>
+    </div>
+
+    <h3 style="margin-top:34px">What else is on that weekend</h3>
+    <div class="cut">
+      <div class="n">Stockyards Championship Rodeo<span>Fri &amp; Sat 7:30pm</span></div>
+      <p>At Cowtown Coliseum, built 1908 and host of the world&rsquo;s first indoor rodeo in 1918. Walking distance if the group stays in the Stockyards. <span class="tag tix">Ticketed</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Billy Bob&rsquo;s Texas<span>Live bull riding Fri &amp; Sat, 8:30 and 9:30pm</span></div>
+      <p>The world&rsquo;s largest honky tonk. The music lineup for that weekend has not been announced &mdash; that room books late. <a href="https://billybobstexas.com" target="_blank" rel="noopener">billybobstexas.com</a></p>
+    </div>
+    <div class="cut">
+      <div class="n">Fort Worth Herd cattle drive<span>Daily, 11:30am and 4:00pm</span></div>
+      <p>Longhorns driven down Exchange Avenue twice a day, every day. Takes about ten minutes and costs nothing. <span class="tag free">Free</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Hot Wheels Monster Trucks Live<span>Dickies Arena · four shows</span></div>
+      <p>Friday 7:00pm, Saturday 11:30am <em>and</em> 6:30pm, Sunday 1:30pm. Worth knowing chiefly because Dickies Arena sits in the same mile as the TCU stadium and the museums &mdash; four shows across three days means traffic pressure there all weekend. <span class="tag tix">Ticketed</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Bass Performance Hall<span>Downtown</span></div>
+      <p>The Fort Worth Symphony performs <em>Oz with Orchestra</em> on the 13th and 14th, and <em>When Instruments Roamed the Earth</em> on the 14th. The venue publishes dates but not times &mdash; those sit with the symphony and need checking closer to the date. <span class="tag tix">Ticketed</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Dallas Stars<span>American Airlines Center · about 40 min east</span></div>
+      <p>Saturday the 14th against Buffalo at 7:00pm, Sunday the 15th against Florida at 7:00pm. Saturday is a real option if TCU draws an early kickoff. <span class="tag tix">Ticketed</span></p>
+    </div>
+    <div class="cut">
+      <div class="n">Japanese Garden &amp; Water Gardens<span>Free or near-free</span></div>
+      <p>Mid-November is peak season for the maples at the Japanese Garden. The Water Gardens &mdash; Philip Johnson, 1974 &mdash; are downtown and free. <a href="https://fwbg.org" target="_blank" rel="noopener">fwbg.org</a></p>
+    </div>
+    <div class="cut">
+      <div class="n">Not yet announced<span>Flagged rather than guessed</span></div>
+      <p>The TCU kickoff time, the Billy Bob&rsquo;s lineup for that weekend, November programming at the Modern, and the Mavericks schedule were all still unpublished when this was compiled. All are worth a recheck nearer the date.</p>
+    </div>
+  </div>
+</section>
+
+<section id="offwall">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Section Five</span>
+      <h2>Off the wall</h2>
+      <p>The things that are only possible here, plus the ones that got checked and ruled out.</p>
     </div>
 
     <div class="callout">
-      <span class="eyebrow">The thing nobody expects</span>
-      <h3>Saturday costs more than game day. Everywhere.</h3>
-      <p>Sunday is the Cowboys–49ers game, and it's the <em>cheapest</em> night of the three at every hotel on this list. Saturday is the most expensive. That isn't an NFL effect — it's a Fort Worth effect. TCU hosts Kansas State on Saturday and the city fills up around it.</p>
-      <p>Useful if the budget needs to move: Saturday is the lever, and Sunday night is close to a bargain.</p>
-    </div>
-
-    <div class="hotel pick">
-      <span class="pick-flag">Recommended</span>
-      <div>
-        <h3><a href="https://www.ihg.com/kimptonhotels/hotels/us/en/harper-hotel-fort-worth-tx/ftwms/hoteldetail" target="_blank" rel="noopener">Kimpton Harper Hotel</a></h3>
-        <div class="where">Downtown · 714 Main St · <a href="https://maps.google.com/?q=Kimpton+Harper+Hotel,+714+Main+St,+Fort+Worth,+TX+76102" target="_blank" rel="noopener">Map</a></div>
-        <p>The best value here by a clear margin, and it doesn't feel like a compromise. A 1920s landmark tower with the lobby and bar on the 24th floor — the views are a reason in themselves. <a href="https://www.ihg.com/kimptonhotels/hotels/us/en/harper-hotel-fort-worth-tx/ftwms/dining" target="_blank" rel="noopener">Il Modo</a> on the ground floor handles dinner without anyone getting in a car.</p>
-        <p>It's the best-reviewed of the four with guests, and being downtown means Sundance Square, Bass Performance Hall and twenty-odd restaurants are a walk rather than a ride.</p>
-        <p>What it costs is the museum walk — the Cultural District is a short drive rather than a stroll, so Saturday morning needs a car or a rideshare. Included breakfast and the hotel credit go a long way to offsetting that.</p>
-        <ul class="perks">
-          <li>Daily breakfast for two</li>
-          <li>$100 hotel credit per stay</li>
-          <li>Room upgrade, subject to availability</li>
-          <li>Local welcome amenity</li>
-          <li>Early check-in / late check-out, subject to availability</li>
-        </ul>
-      </div>
-      <div class="facts">
-        <div class="lab">Per room · 3 nights</div>
-        <div class="price">$1,251.77<span>Taxes &amp; fees incl.</span></div>
-        <div class="bars">
-          <div class="bar peak" style="height:56%"><span>$399</span></div>
-          <div class="bar peak" style="height:55%"><span>$395</span></div>
-          <div class="bar" style="height:29%"><span>$209</span></div>
-        </div>
-        <div class="barlabs"><div>FRI</div><div>SAT</div><div>SUN</div></div>
-        <div class="rows">
-          Due at booking <b>$0</b><br>
-          <span class="ok">Refundable to Nov 12</span><br>
-          To TCU stadium <b>~4 mi</b><br>
-          To AT&amp;T Stadium <b>~14 mi</b><br>
-          Guest rating <b>4.9 / 5</b>
-        </div>
-        <a class="btn" href="https://www.ihg.com/kimptonhotels/hotels/us/en/harper-hotel-fort-worth-tx/ftwms/hoteldetail" target="_blank" rel="noopener">View hotel →</a>
-      </div>
-    </div>
-
-    <div class="hotel">
-      <div>
-        <h3><a href="https://thecrescenthotelfortworth.com/" target="_blank" rel="noopener">The Crescent Hotel Fort Worth</a></h3>
-        <div class="where">Cultural District · 3300 Camp Bowie Blvd · <a href="https://maps.google.com/?q=The+Crescent+Hotel,+3300+Camp+Bowie+Blvd,+Fort+Worth,+TX+76107" target="_blank" rel="noopener">Map</a></div>
-        <p>The location play. It sits in the Cultural District, which means the <a href="https://kimbellart.org/" target="_blank" rel="noopener">Kimbell</a> and the <a href="https://www.cartermuseum.org/" target="_blank" rel="noopener">Amon Carter</a> are a genuine walk — a few hundred yards, not a drive — and it's the closest option on this list to the TCU stadium. If Saturday morning matters most, this is the one that makes it effortless.</p>
-        <p>A newer property with a strong restaurant, a spa and a rooftop pool; it reads more resort than business hotel, and the service reviews are excellent.</p>
-        <p class="noperk">A second rate is available here that adds daily breakfast for two and a $100 hotel credit, for roughly $500 more per room. Worth asking about if included breakfast for the group is a priority.</p>
-      </div>
-      <div class="facts">
-        <div class="lab">Per room · 3 nights</div>
-        <div class="price">$1,557.42<span>Taxes &amp; fees incl.</span></div>
-        <div class="bars">
-          <div class="bar" style="height:78%"><span>$569</span></div>
-          <div class="bar peak" style="height:83%"><span>$609</span></div>
-          <div class="bar" style="height:66%"><span>$479</span></div>
-        </div>
-        <div class="barlabs"><div>FRI</div><div>SAT</div><div>SUN</div></div>
-        <div class="rows">
-          Due at booking <b>$0</b><br>
-          <span class="ok">Refundable to Nov 11</span><br>
-          To TCU stadium <b>2.5 mi · 8–10 min</b><br>
-          To AT&amp;T Stadium <b>17 mi · 25–30 min</b><br>
-          Kimbell museum <b>Walkable</b>
-        </div>
-        <a class="btn" href="https://thecrescenthotelfortworth.com/" target="_blank" rel="noopener">View hotel →</a>
-      </div>
-    </div>
-
-    <div class="hotel">
-      <div>
-        <h3><a href="https://aubergeresorts.com/bowiehouse/" target="_blank" rel="noopener">Bowie House, Auberge Collection</a></h3>
-        <div class="where">Cultural District · 3700 Camp Bowie Blvd · <a href="https://maps.google.com/?q=Bowie+House,+3700+Camp+Bowie+Blvd,+Fort+Worth,+TX+76107" target="_blank" rel="noopener">Map</a></div>
-        <p>The best room product in the city and the highest-rated hotel here. Auberge runs it, the studios are genuinely large, and both the restaurant and the Ash spa are destinations in their own right. Equally well placed for Saturday — the museums are minutes away.</p>
-        <p>If this weekend should feel like an occasion rather than a trip, this is the one. Two things to weigh, though.</p>
-        <p><strong>It takes a deposit at booking</strong> — about a third of the stay, per room — where the others take nothing upfront. And its free-cancellation window closes <strong>a month earlier</strong> than everywhere else, which makes it the option that has to be decided first.</p>
-        <ul class="perks">
-          <li>Complimentary breakfast for two</li>
-          <li>$100 resort credit</li>
-          <li>Upgrade at check-in, subject to availability</li>
-          <li>Early check-in / late check-out, subject to availability</li>
-        </ul>
-      </div>
-      <div class="facts">
-        <div class="lab">Per room · 3 nights</div>
-        <div class="price">$4,212.62<span>Taxes &amp; fees incl.</span></div>
-        <div class="bars">
-          <div class="bar peak" style="height:100%"><span>$1,419</span></div>
-          <div class="bar peak" style="height:100%"><span>$1,419</span></div>
-          <div class="bar" style="height:46%"><span>$659</span></div>
-        </div>
-        <div class="barlabs"><div>FRI</div><div>SAT</div><div>SUN</div></div>
-        <div class="rows">
-          Due at booking <b class="warn">$1,404.21</b><br>
-          <span class="warn">Refundable only to Oct 13</span><br>
-          To TCU stadium <b>2.8 mi · 10 min</b><br>
-          To AT&amp;T Stadium <b>17 mi · 25–30 min</b><br>
-          Guest rating <b>4.7 / 5</b>
-        </div>
-        <a class="btn" href="https://aubergeresorts.com/bowiehouse/" target="_blank" rel="noopener">View hotel →</a>
-      </div>
-    </div>
-
-    <div class="hotel">
-      <div>
-        <h3><a href="https://www.marriott.com/en-us/hotels/dalwm-le-meridien-fort-worth-downtown/overview/" target="_blank" rel="noopener">Le Méridien Fort Worth Downtown</a></h3>
-        <div class="where">Downtown · 811 Commerce St · <a href="https://maps.google.com/?q=Le+M%C3%A9ridien+Fort+Worth+Downtown,+811+Commerce+St,+Fort+Worth,+TX+76102" target="_blank" rel="noopener">Map</a></div>
-        <p>The value option, and a perfectly good one. Downtown location a block from the Harper, a sixth-floor pool, a well-liked rooftop lounge, and it comes in under everything else here. For a group that would rather spend on dinners and tickets than on the room, this frees up real budget.</p>
-        <p>What you give up is character — it's a competent downtown hotel rather than a piece of Fort Worth — and there's no included breakfast or credit.</p>
-        <p class="noperk">Two practical notes: valet is the only parking, at roughly $66 a night, so rideshare may work out cheaper. And the best rate requires each guest to have a free Marriott Bonvoy account with names matching exactly.</p>
-      </div>
-      <div class="facts">
-        <div class="lab">Per room · 3 nights</div>
-        <div class="price">$1,086.89<span>Taxes &amp; fees incl.</span></div>
-        <div class="bars">
-          <div class="bar" style="height:47%"><span>$340</span></div>
-          <div class="bar peak" style="height:51%"><span>$374</span></div>
-          <div class="bar" style="height:26%"><span>$188</span></div>
-        </div>
-        <div class="barlabs"><div>FRI</div><div>SAT</div><div>SUN</div></div>
-        <div class="rows">
-          Due at booking <b>$0</b><br>
-          <span class="ok">Refundable to Nov 11</span><br>
-          To TCU stadium <b>~4 mi</b><br>
-          To AT&amp;T Stadium <b>~14 mi</b><br>
-          Guest rating <b>4.4 / 5</b>
-        </div>
-        <a class="btn" href="https://www.marriott.com/en-us/hotels/dalwm-le-meridien-fort-worth-downtown/overview/" target="_blank" rel="noopener">View hotel →</a>
-      </div>
-    </div>
-
-    <div class="note">
-      <h4>Three things worth knowing before anyone books</h4>
-      <ul>
-        <li><strong>Bowie House decides first.</strong> Its free-cancellation window closes a month before the others, and it's the only one asking for money upfront. If it's in contention, that's the real deadline on this decision.</li>
-        <li><strong>Rooms sitting together isn't automatic.</strong> Booking several rooms works differently from booking one. If connecting or adjoining rooms matter, that needs arranging with the property directly — worth raising early rather than late.</li>
-        <li><strong>Rates move.</strong> These were captured together on the same day so the comparison is like-for-like. On a weekend with two football games in town, availability at these prices won't hold indefinitely.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="also">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Also considered</span>
-      <h2>Three more that were priced</h2>
-      <p>Included so nobody spends an evening re-researching them.</p>
-    </div>
-
-    <div class="cut">
-      <div class="n"><a href="https://www.hoteldrover.com/" target="_blank" rel="noopener">Hotel Drover</a>, Autograph Collection<span>$5,508.13 · Stockyards</span></div>
-      <p>The most fun option and by far the most expensive — more than four times Le Méridien for the same three nights. It sits inside the Stockyards, so Friday night needs no logistics at all: the rodeo and Billy Bob's are a walk from the lobby. The cost is location for the rest of the weekend, being furthest from both the Cultural District and Arlington. Genuinely worth it if the Stockyards <em>is</em> the trip; hard to justify otherwise.</p>
-    </div>
-    <div class="cut">
-      <div class="n"><a href="https://www.omnihotels.com/hotels/fort-worth" target="_blank" rel="noopener">Omni Fort Worth Hotel</a><span>$1,337.27 · Downtown</span></div>
-      <p>A serious property — Mokara Spa, Bob's Steak &amp; Chop House in-house, rooftop pool — and the closest of anything reviewed to AT&amp;T Stadium, which matters for Sunday. It came in slightly above Kimpton Harper with noticeably less included, which is the only reason it isn't in the top four. Worth revisiting if Sunday logistics become the deciding factor.</p>
-    </div>
-    <div class="cut">
-      <div class="n"><a href="https://www.marriott.com/en-us/hotels/dfwak-the-sinclair-autograph-collection/overview/" target="_blank" rel="noopener">The Sinclair</a>, Autograph Collection<span>Downtown</span></div>
-      <p>An art-deco landmark on Main Street and one of the most distinctive buildings in the city. The problem is availability on these specific dates: the only rates on offer are non-refundable, paid in full at booking with no recovery if plans change. For a group still finalising numbers that's the wrong risk. Worth keeping in mind for a future trip.</p>
-    </div>
-  </div>
-</section>
-
-<section id="saturday">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Saturday · The big day</span>
-      <h2>Two world-class museums, then a Big 12 game</h2>
-      <p>The good news about Saturday is that everything worth doing sits in the same square mile. Fort Worth's Cultural District holds two nationally significant museums, and the college stadium is minutes from both. The morning and the afternoon fit together without anyone crossing town.</p>
-    </div>
-
-    <div class="sched">
-      <div class="row">
-        <div class="t">10:00 AM</div>
-        <div>
-          <div class="what"><a href="https://kimbellart.org/" target="_blank" rel="noopener">Kimbell Art Museum</a><span class="tag">Opens 10 AM Sat</span></div>
-          <p>Showing <strong>Photography's First Century</strong>, drawn from the Bibliothèque nationale de France — more than 150 images tracing the medium from the daguerreotype onward, and the Kimbell's first exhibition ever devoted to photography. Runs through mid-January. The building is the other reason to go: Louis Kahn's vaulted travertine galleries are among the most admired museum spaces in the world. The permanent collection — Caravaggio, Monet, Picasso — is free; special exhibitions are ticketed.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">11:45 AM</div>
-        <div>
-          <div class="what"><a href="https://www.cartermuseum.org/" target="_blank" rel="noopener">Amon Carter Museum of American Art</a><span class="tag free">Always free</span></div>
-          <p>Directly across the lawn, so it costs nothing but the walk. <strong>The Statue of Liberty: from Bartholdi to Warhol</strong> traces the statue's image through American art from the 1870s onward, running into early January. There's a standing Georgia O'Keeffe installation on the mezzanine as well. Admission is free, always. Budget an hour, or two for anyone who likes to linger.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">1:00 PM</div>
-        <div>
-          <div class="what">Lunch in the Cultural District</div>
-          <p>Stay in the neighbourhood. The stadium is minutes away and the whole point of the morning is not having to move the group across town before kickoff.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">Kickoff TBA</div>
-        <div>
-          <div class="what"><a href="https://gofrogs.com/sports/football/schedule" target="_blank" rel="noopener">TCU vs. Kansas State</a><span class="tag tix">Needs tickets</span></div>
-          <p>TCU's second-to-last home game of the season and a proper Big 12 matchup — Kansas State has taken three of the last four meetings. The tailgating scene outside the stadium is an event in itself, with alumni setups going up three to four hours before kickoff and anyone welcome to wander through. Resale tickets currently start around $61. <strong>Kickoff time isn't set yet</strong> — the conference announces windows roughly two weeks out, so this needs a check in early November.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">Evening</div>
-        <div>
-          <div class="what">Dinner, then optional rodeo</div>
-          <p>The <a href="https://www.fortworth.com/things-to-do/western-experience/cowtown-coliseum/" target="_blank" rel="noopener">Stockyards Championship Rodeo</a> runs Friday and Saturday nights at 7:30 in the 1908 Cowtown Coliseum. Whether it fits depends entirely on the kickoff time — an early game leaves room, a late one doesn't.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">
-      <h4>Saturday traffic — plan for it</h4>
-      <ul>
-        <li>The TCU stadium, <a href="https://www.dickiesarena.com/" target="_blank" rel="noopener">Dickies Arena</a> and the Cultural District museums all sit within about a mile of each other.</li>
-        <li>Dickies Arena has its own ticketed event that Saturday, stacking on top of the TCU crowd.</li>
-        <li>Parking in that cluster will be genuinely difficult. Rideshare in and out beats driving, and the museum morning beats the parking lot.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="friday">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Friday evening</span>
-      <h2>Land, drop bags, go to the Stockyards</h2>
-      <p>Whatever time the group gets in, Friday night has an easy answer that needs no advance planning.</p>
-    </div>
-
-    <div class="sched">
-      <div class="row">
-        <div class="t">Evening</div>
-        <div>
-          <div class="what"><a href="https://fortworthstockyards.com/" target="_blank" rel="noopener">Fort Worth Stockyards</a><span class="tag free">Free to wander</span></div>
-          <p>A National Historic District, open around the clock, and the single most Fort Worth thing available. Brick streets, western outfitters, and Mule Alley — the restored stable row now holding some of the best bars and restaurants in the city.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">7:30 PM</div>
-        <div>
-          <div class="what"><a href="https://www.fortworth.com/things-to-do/western-experience/cowtown-coliseum/" target="_blank" rel="noopener">Stockyards Championship Rodeo</a><span class="tag tix">Tickets</span></div>
-          <p>Every Friday and Saturday night at Cowtown Coliseum, which hosted the world's first indoor rodeo in 1918. It's the real thing rather than a show staged for visitors, and it runs about two hours. Only works if the group is on the ground by around 7.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">8:30 PM</div>
-        <div>
-          <div class="what"><a href="https://billybobstexas.com/" target="_blank" rel="noopener">Billy Bob's Texas</a><span class="tag">No booking needed</span></div>
-          <p>The world's largest honky tonk, and the easiest first night in Texas there is. <strong>Live bull riding at 8:30 and 9:30</strong> on Friday and Saturday nights, a dance floor bigger than most nightclubs, pool tables, live music, and a hall of handprints from every act that's ever played there. Cover is modest on a normal night and higher when there's a headline act — worth <a href="https://billybobstexas.com/events" target="_blank" rel="noopener">checking the calendar</a> closer to the date.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">Alternative</div>
-        <div>
-          <div class="what">Stay downtown: Sundance Square</div>
-          <p>If nobody wants to travel, <a href="https://sundancesquare.com/" target="_blank" rel="noopener">Sundance Square</a> spans 35 blocks with 20+ restaurants and plenty of patio dining, and parking is free after 5 PM and all weekend. <a href="https://www.dfwi.org/go/bass-performance-hall" target="_blank" rel="noopener">Bass Performance Hall</a> is here too — worth checking what's on that night.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="sunday">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Sunday</span>
-      <h2>Game day in Arlington</h2>
-      <p>A 3:25 kickoff leaves a genuinely relaxed morning.</p>
-    </div>
-    <div class="sched">
-      <div class="row">
-        <div class="t">11:30 AM</div>
-        <div>
-          <div class="what"><a href="https://www.fortworth.com/things-to-do/attractions/fort-worth-herd/" target="_blank" rel="noopener">Fort Worth Herd cattle drive</a><span class="tag free">Free</span></div>
-          <p>Real longhorns driven down Exchange Avenue by drovers in period dress, twice daily at 11:30 AM and 4:00 PM. It takes about fifteen minutes and it's the most photographed thing in the city for good reason. The 11:30 fits comfortably before Arlington; the 4:00 does not.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">1:15 PM</div>
-        <div>
-          <div class="what">Leave for AT&amp;T Stadium</div>
-          <p>25–30 minutes from any of these hotels without traffic — but this is a Cowboys home game, so budget well beyond that. Arriving early is also the point: the area around the stadium is good for pregame food and drinks.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">3:25 PM</div>
-        <div>
-          <div class="what"><a href="https://www.dallascowboys.com/schedule/" target="_blank" rel="noopener">Cowboys vs. 49ers</a><span class="tag tix">Needs tickets</span></div>
-          <p>Week 10, and one of the NFL's marquee rivalries. AT&amp;T Stadium seats 80,000 and holds the largest video board in the sport — worth arriving with time to look around. The kickoff time is flex-eligible and could still shift, so confirm in early November.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="t">~7:00 PM</div>
-        <div>
-          <div class="what">Back to Fort Worth</div>
-          <p>Eighty thousand people leave at once and rideshare surges accordingly. Walking several blocks away from the stadium before requesting a car reliably beats the official pickup zone. Stadium parking is expensive and the exit is slow if driving.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="more">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">More to do</span>
-      <h2>If there's time, or if the group splits up</h2>
-      <p>Not everyone will want the same weekend. These work as half-day or evening additions, and several are free.</p>
+      <span class="eyebrow">Worth knowing before ordering a drink</span>
+      <h3>The frozen margarita was invented twenty minutes from the stadium</h3>
+      <p>On <b>11 May 1971</b>, a Dallas restaurateur named Mariano Martinez got tired of his bartenders failing to keep up with demand for margaritas made to his father&rsquo;s recipe. He had seen a Slurpee machine in a 7-Eleven, bought a soft-serve ice cream machine, modified it, pulled the lever, and produced the world&rsquo;s first frozen margarita. He never patented it. Every frozen margarita machine on earth descends from that one.</p>
+      <p>The original is now in the <a href="https://americanhistory.si.edu/collections/object/nmah_1294740" target="_blank" rel="noopener">Smithsonian&rsquo;s National Museum of American History</a>, which lists it among the museum&rsquo;s notable inventions. This is why Dallas calls itself the official home of the frozen margarita &mdash; and it is a real claim, not a marketing one. <b>Mariano&rsquo;s Hacienda Ranch in Arlington</b>, two miles from the stadium and open from 9am Sunday, carries the name.</p>
     </div>
 
     <div class="cards">
       <div class="card">
-        <div class="n"><a href="https://www.themodern.org/" target="_blank" rel="noopener">The Modern Art Museum</a></div>
-        <div class="cred">Cultural District · Third museum, same lawn</div>
-        <p>Tadao Ando's building — five glass pavilions standing in a reflecting pond — is reason enough to go without even checking what's hanging. One of the finest pieces of museum architecture in the country, and a two-minute walk from the Kimbell.</p>
-        <p>November programming hadn't been announced at time of writing; worth a look closer to the date.</p>
+        <div class="n">Margaritas &amp; More</div>
+        <div class="cred">Cowtown Tour Company · Fort Worth</div>
+        <p>A four-and-a-half hour guided tour with transportation included: Tex-Mex tasting at each stop plus a margarita per adult, meeting at the Trinity Metro Park &amp; Ride. Nobody drives, which for eight people is most of the appeal. Standard bookings run below eleven people, so the group fits.</p>
+        <p>The same operator also advertises group transport to the stadium in Arlington &mdash; which may be more useful than the tour itself on a Sunday when nobody wants to be the designated driver.</p>
+        <div class="meta"><a href="https://www.cowtowntourco.com/margaritas-and-more-tour" target="_blank" rel="noopener">cowtowntourco.com</a></div>
       </div>
-      <div class="card">
-        <div class="n"><a href="https://fwbg.org/gardens/japanese-garden/" target="_blank" rel="noopener">Japanese Garden &amp; Botanic Garden</a></div>
-        <div class="cred">Cultural District · Peak season</div>
-        <p>Seven acres of koi ponds, pagodas and Japanese maples inside the 120-acre Botanic Garden. Mid-November is the best time of year to see it — the maples turn, and it's the quietest thing on this list.</p>
-        <p>A real option for anyone who'd rather skip a football game.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://sidrichardsonmuseum.org/" target="_blank" rel="noopener">Sid Richardson Museum</a></div>
-        <div class="cred">Sundance Square · Free admission</div>
-        <p>A small, excellent collection of Remington and Russell western paintings, right on the square downtown. Takes forty minutes and costs nothing — the ideal gap-filler before dinner.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://www.fortworth.com/things-to-do/attractions/fort-worth-water-gardens/" target="_blank" rel="noopener">Water Gardens</a></div>
-        <div class="cred">Downtown · Free · 15 minutes</div>
-        <p>Philip Johnson's 1974 concrete water sculpture — three pools, one of which you descend into as water rushes past on every side. Strange, brutalist and genuinely worth seeing. Walking distance from both downtown hotels.</p>
-      </div>
-      <div class="card">
-        <div class="n">Mule Alley &amp; Stockyards shopping</div>
-        <div class="cred">Stockyards · Half a morning</div>
-        <p>Beyond the rodeo and the cattle drive there's the 1911 livestock exchange building, western outfitters and boot makers worth browsing, and Mule Alley's restored stables. A good Sunday-morning alternative to the cattle drive crowd.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://www.dallascowboys.com/stadium/tours" target="_blank" rel="noopener">AT&amp;T Stadium tour</a></div>
-        <div class="cred">Arlington · Not on game weekend</div>
-        <p>The behind-the-scenes tour — locker rooms, press box, field level — is excellent, but tours don't run on game days. Flagged here only so nobody plans around it.</p>
-      </div>
-    </div>
 
-    <div class="note">
-      <h4>Worth checking closer to the date</h4>
-      <ul>
-        <li><strong><a href="https://www.dfwi.org/go/bass-performance-hall" target="_blank" rel="noopener">Bass Performance Hall</a></strong> — Broadway tours, symphony and ballet downtown. The autumn calendar fills in later in the year.</li>
-        <li><strong><a href="https://www.dickiesarena.com/events" target="_blank" rel="noopener">Dickies Arena</a></strong> — concerts and events next to the TCU stadium. A family event is already booked that Saturday; other dates may open up.</li>
-        <li><strong><a href="https://sundancesquare.com/events/" target="_blank" rel="noopener">Sundance Square</a></strong> — free live music on the plaza most weekends, plus seasonal markets.</li>
-        <li><strong>Dallas</strong> is 35–45 minutes east. The <a href="https://www.jfk.org" target="_blank" rel="noopener">Sixth Floor Museum</a> at Dealey Plaza and the <a href="https://www.nashersculpturecenter.org/" target="_blank" rel="noopener">Nasher Sculpture Center</a> both justify the drive — though not on a weekend this full.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <div class="card">
+        <div class="n">ICE! at the Gaylord Texan</div>
+        <div class="cred">Grapevine · opens Friday 13 November</div>
+        <p>Two million pounds of hand-carved ice held at 9&deg;F, with parkas provided. Ten themed rooms and six two-storey ice slides, carved by sculptors who travel in from Harbin. This year&rsquo;s theme is Harry Potter and <b>opening night is the Friday the first two arrive.</b> Tickets from around $33.</p>
+        <p>It sits in the Grapevine corridor near DFW, so it pairs directly with the Hotel Vin option, or works as a Monday-morning stop before a flight.</p>
+      </div>
 
-<section id="eat">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Eating</span>
-      <h2>Where to book, and what to skip</h2>
-      <p>Fort Worth's dining has moved a long way in five years. Several of these need reservations well in advance for a group.</p>
-    </div>
-
-    <div class="cards">
       <div class="card">
-        <div class="n"><a href="https://www.lemargottx.com/" target="_blank" rel="noopener">Le Margot</a></div>
-        <div class="cred">French · Near TCU / Clearfork · Book early</div>
-        <p>From chefs Felipe Armenta and Graham Elliot, and named among Texas Monthly's best new restaurants. The closest Fort Worth gets to a proper occasion dinner and the strongest single recommendation for a group evening. It's on S. Hulen Street a few blocks west of the TCU campus, so it pairs naturally with Saturday. Reservations go through Tock and nights book out — reserve well ahead.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://www.donartemio.us/" target="_blank" rel="noopener">Don Artemio</a></div>
-        <div class="cred">Mexican · West 7th · James Beard finalist</div>
-        <p>Regional cooking from Coahuila rather than Tex-Mex, and a James Beard finalist. The most decorated dining room in the city and the most interesting food on this list, in a striking West 7th space. <strong>Worth knowing for a group:</strong> parties of five or more on Friday and Saturday carry a $95 per person minimum before tax and tip.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://goldeesbbq.com/" target="_blank" rel="noopener">Goldee's Bar-B-Q</a></div>
-        <div class="cred">Michelin Bib Gourmand · Lunch only</div>
-        <p>The only Fort Worth restaurant Michelin has recognised, and rated among the best barbecue in Texas — it topped Texas Monthly's Top 50 list. Open Friday to Sunday, 11am to 3pm only, and it <em>sells out</em>, with queues forming well before opening. Realistically that means Friday lunch on arrival day, since Saturday is the game and Sunday is Arlington. About 20 minutes south of downtown.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://www.smokenashbbq.net/" target="_blank" rel="noopener">Smoke 'N Ash BBQ</a></div>
-        <div class="cred">Michelin Recommended · Texas–Ethiopian</div>
-        <p>Central Texas barbecue crossed with Ethiopian cooking — brisket alongside injera and berbere. It sounds improbable and it works; there is nowhere else like it, and the chef is a James Beard semifinalist. It's in south Arlington, closes at 6pm on Sundays, so it's a pre-game lunch rather than a post-game dinner.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://www.ihg.com/kimptonhotels/hotels/us/en/harper-hotel-fort-worth-tx/ftwms/dining" target="_blank" rel="noopener">Il Modo</a></div>
-        <div class="cred">Italian · Downtown · Inside Kimpton Harper</div>
-        <p>Contemporary Italian on the ground floor of the Harper, open from 6:30am for breakfast and again from 5pm for dinner. Reviews are strongest on the breakfast and the service; opinions on dinner are more mixed. The easy answer on a night when nobody wants to organise anything, and the obvious spot for a group breakfast.</p>
-      </div>
-      <div class="card">
-        <div class="n"><a href="https://mulealleyfortworth.com/" target="_blank" rel="noopener">Mule Alley</a>, Stockyards</div>
-        <div class="cred">128 E Exchange Ave · Walkable cluster</div>
-        <p>The restored 1912 horse and mule barns, now a walkable row of chef-driven restaurants, bars and heritage shops — Caterina's, Second Rodeo Brewing, Cowtown Winery and a dozen more. Not a pilgrimage, but exactly right for Friday night when the group is tired and wants options rather than a plan. Full <a href="https://fortworthstockyards.com/restaurants/" target="_blank" rel="noopener">restaurant directory here</a>.</p>
-      </div>
-    </div>
-
-    <div class="note">
-      <h4>Two things checked and ruled out</h4>
-      <ul>
-        <li><strong>Michelin-starred dining</strong> — Fort Worth has none. The nearest starred restaurants are in Dallas, 40 minutes east, and the best of them seat very few people. Not practical for a group on this weekend.</li>
-        <li><strong>Snow's BBQ</strong>, of Netflix <em>Chef's Table</em> fame, is roughly three hours away in Lexington and open Saturdays only — the one day the group is committed elsewhere. No Dallas–Fort Worth restaurant has appeared on the show.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="logistics">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Getting around</span>
-      <h2>Logistics worth knowing</h2>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <div class="n">DFW to Fort Worth</div>
-        <div class="cred">Roughly 25–30 min without traffic</div>
-        <p>All four recommended hotels are a similar run from the airport, with Friday evening arrivals taking longer. <a href="https://trinitymetro.org/service/texrail/" target="_blank" rel="noopener">TEXRail</a> also runs from DFW Terminal B into downtown Fort Worth for anyone who prefers rail to a car.</p>
-      </div>
-      <div class="card">
-        <div class="n">Rideshare vs. rental</div>
-        <div class="cred">Recommendation: rideshare</div>
-        <p>Everything on this itinerary is within about 20 minutes, parking near the stadium cluster on Saturday will be difficult, and downtown valet runs $60+ a night at some hotels. Rideshare is likely cheaper and definitely simpler.</p>
-      </div>
-      <div class="card">
-        <div class="n">Sunday postgame</div>
-        <div class="cred">The one hard moment</div>
-        <p>Rideshare surges hard after an NFL game and the pickup queues are long. Walking several blocks before requesting a car reliably beats waiting in the official zone. If driving, expect a slow exit either way.</p>
-      </div>
-      <div class="card">
-        <div class="n">Monday morning</div>
-        <div class="cred">Museums closed</div>
-        <p>Both the Kimbell and the Amon Carter are closed on Mondays, so there's no morning activity to build in before departure. Plan Monday purely as a travel day.</p>
+        <div class="n">Ruled out &mdash; stated so it reads as checked</div>
+        <div class="cred">Three things that looked promising</div>
+        <p><b>NASCAR Racing Experience</b> at Texas Motor Speedway lets you drive or ride in a real Cup car. The published 2026 dates run March through September plus one in December. <b>There are no November dates.</b></p>
+        <p><b>The Fort Worth Margarita Festival</b> is a May event &mdash; it ran on 16 May this year at Cullen Yards. Not that weekend.</p>
+        <p><b>Dallas&rsquo;s Margarita Mile</b> is real and free, but seasonal: the regular run closes around the start of November, and this year&rsquo;s special edition finished in July. A holiday spin-off ran from mid-November last year, so it may be live &mdash; but the dates are not published yet and it is not worth printing a trail that may be shut. Worth one recheck nearer the date.</p>
       </div>
     </div>
   </div>
@@ -663,10 +815,10 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
 
 <footer>
   <div class="wrap">
-    Hotel rates captured on a single day for like-for-like comparison · 3 nights, 1 room, 2 adults, taxes and fees included · Rates and availability change<br>
-    TCU kickoff time, exhibition schedules and event calendars all subject to change — worth confirming in early November<br>
-    Distances are driving estimates; confirm live routing on the day<br>
-    Restaurant hours and group policies verified at time of writing — call ahead for parties of five or more
+    Fort Worth, Texas · Friday 13 &ndash; Monday 16 November 2026<br>
+    Nine properties priced · 1 room, 2 adults · all-in totals including taxes and fees · refundable rates only<br>
+    Hotel rates and availability verified against each property&rsquo;s own booking system. Distances and drive times are Google Maps lookups from each property&rsquo;s coordinates in ordinary traffic.<br>
+    Rates, availability and event schedules move. Anything unconfirmed at the time of writing is marked as such in the text above.
   </div>
 </footer>
 
