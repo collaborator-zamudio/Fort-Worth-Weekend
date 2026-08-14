@@ -153,6 +153,30 @@ tr.blocked:hover td{background:#F5EAE9}
 .legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--ink-soft)}
 .legend i{width:11px;height:11px;border-radius:50%;display:inline-block;margin-right:6px;vertical-align:-1px;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
 
+
+.seam{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--limestone-deep);padding:17px 0}
+.seam .wrap{display:grid;grid-template-columns:auto 1fr;gap:0 26px;align-items:baseline}
+.seam .lab{font-family:'Oswald',sans-serif;font-size:.58rem;letter-spacing:.18em;color:var(--brass);text-transform:uppercase;font-weight:600;white-space:nowrap}
+.seam p{margin:0;font-size:.93rem;color:var(--ink);line-height:1.5}
+.seam.tease{background:var(--ink);border-color:var(--ink)}
+.seam.tease .lab{color:var(--brass)}
+.seam.tease p{color:#CFC7B8}
+.seam.tease a{color:var(--brass);border-bottom-color:rgba(174,136,55,.45);font-style:italic}
+.seam.tease a:hover{color:var(--white);border-bottom-color:var(--white)}
+@media(max-width:720px){.seam .wrap{grid-template-columns:1fr;gap:6px}}
+
+.tblctl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-family:'Oswald',sans-serif;font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600;border:1px solid var(--rule);background:var(--white);color:var(--ink-soft);padding:7px 12px;cursor:pointer;transition:all .13s}
+.chip:hover{border-color:var(--ink-soft);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.cnt{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ink-soft)}
+th.s{cursor:pointer;user-select:none;white-space:nowrap}
+th.s:hover{color:var(--ink)}
+th.s:after{content:"\2195";opacity:.3;margin-left:5px;font-size:.85em}
+th.s[data-dir="a"]:after{content:"\2191";opacity:1;color:var(--oxblood)}
+th.s[data-dir="d"]:after{content:"\2193";opacity:1;color:var(--oxblood)}
+tr.hid{display:none}
 footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;line-height:1.85}
 
 @media(max-width:880px){
@@ -199,7 +223,7 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
 </header>
 
 <div class="factbar"><div class="wrap">
-  <span class="eyebrow">Before we start &mdash; this is not Dallas</span>
+  <span class="eyebrow">Before we start &mdash; some facts</span>
   <div class="fbgrid">
   <div class="big">In 1875 a lawyer in Dallas wrote to his local paper that Fort Worth had gone so quiet he had seen a panther asleep in the street.</div>
   <div>
@@ -221,6 +245,11 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
   <a href="#map-sec">Map</a>
 </div></nav>
 
+<div class="seam tease"><div class="wrap">
+  <span class="lab">Worth knowing</span>
+  <p>The frozen margarita was invented twenty minutes from Sunday&rsquo;s seats, and the original machine is in the Smithsonian. <a href="#offwall">The story, and where to drink one &rarr;</a></p>
+</div></div>
+
 <section id="basis">
   <div class="wrap">
     <div class="sec-head">
@@ -241,6 +270,11 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
     </div>
   </div>
 </section>
+
+<div class="seam"><div class="wrap">
+  <span class="lab">Cowtown</span>
+  <p>Between 1866 and 1890, more than four million head of cattle were driven up the Chisholm Trail straight through Fort Worth &mdash; the last supply stop before the Red River. That is how it got the name Cowtown, and why the Stockyards are where they are.</p>
+</div></div>
 
 <section id="suggested">
   <div class="wrap">
@@ -623,69 +657,78 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
       <h2>All nine, in one table</h2>
       <p>The same figures as above, arranged for scanning. Ride times are to AT&amp;T Stadium. Scroll sideways on a phone.</p>
     </div>
+    <div class="tblctl">
+      <div class="chips">
+        <button type="button" class="chip" data-f="avail" aria-pressed="false">Available Sat&ndash;Mon</button>
+        <button type="button" class="chip" data-f="cheap" aria-pressed="false">Under $1,000</button>
+        <button type="button" class="chip" data-f="ben" aria-pressed="false">Includes benefits</button>
+        <button type="button" class="chip" data-f="walk" aria-pressed="false">Walk to dinner</button>
+      </div>
+      <div class="cnt" id="cnt">Tap a heading to sort</div>
+    </div>
     <div class="tblwrap">
-      <table>
+      <table id="mx">
         <thead><tr>
-          <th>Hotel</th><th>Area</th><th>2 nights</th><th>3 nights</th><th>Rating</th><th>To stadium</th><th>To DFW</th><th>Comment</th><th>Links</th>
+          <th class="s" data-s="name">Hotel</th><th>Area</th><th class="s" data-s="n2">2 nights</th><th class="s" data-s="n3">3 nights</th><th class="s" data-s="rating">Rating</th><th class="s" data-s="stad">To stadium</th><th class="s" data-s="dfw">To DFW</th><th>Comment</th><th>Links</th>
         </tr></thead>
         <tbody>
-          <tr>
+          <tr data-name="Le M&eacute;ridien" data-n2="677.2" data-n3="1086.89" data-rating="4.4" data-stad="18" data-dfw="29" data-avail="1" data-walk="1" data-ben="0" data-cheap="1">
             <td class="hn">Le M&eacute;ridien<span>City View King</span></td><td>Downtown FW</td>
             <td class="num"><b>$677</b></td><td class="num">$1,087</td><td class="num">4.4 (331)</td>
             <td class="num">18 min</td><td class="num">29 min</td>
             <td class="cm">Cheapest by a distance. Dinner on foot. No added benefits.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.752676,-97.328725&amp;query_place_id=ChIJ4c5QJnFxToYRnITLO3lgbjo" target="_blank" rel="noopener">Map</a></td>
           </tr>
-          <tr>
+          <tr data-name="Kimpton Harper" data-n2="816.21" data-n3="1321.66" data-rating="4.4" data-stad="18" data-dfw="30" data-avail="1" data-walk="1" data-ben="1" data-cheap="1">
             <td class="hn">Kimpton Harper<span>1 King</span></td><td>Downtown FW</td>
             <td class="num"><b>$816</b></td><td class="num">$1,322</td><td class="num">4.4 (715)</td>
             <td class="num">18 min</td><td class="num">30 min</td>
             <td class="cm">1921 tower, 24th-floor bar. Added benefits. Restaurant downstairs.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.752837,-97.330299&amp;query_place_id=ChIJPdnnCEBxToYR7ahMp6v8OEM" target="_blank" rel="noopener">Map</a> · <a href="https://www.theharperfortworth.com/" target="_blank" rel="noopener">Site</a></td>
           </tr>
-          <tr>
+          <tr data-name="Omni Fort Worth" data-n2="784.84" data-n3="1422.19" data-rating="4.4" data-stad="17" data-dfw="30" data-avail="1" data-walk="1" data-ben="0" data-cheap="1">
             <td class="hn">Omni Fort Worth<span>Classic Deluxe 2 Queen</span></td><td>Downtown FW</td>
             <td class="num"><b>$785</b></td><td class="num">$1,422</td><td class="num">4.4 (5,978)</td>
             <td class="num">17 min</td><td class="num">30 min</td>
             <td class="cm">Biggest rooms downtown, most reviews of the nine. Closest FW hotel to Arlington.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.748526,-97.328349&amp;query_place_id=ChIJqerq3RRxToYRSfX94bvKQiI" target="_blank" rel="noopener">Map</a></td>
           </tr>
-          <tr>
+          <tr data-name="Hotel Vin" data-n2="856.15" data-n3="1486.27" data-rating="4.6" data-stad="24" data-dfw="5" data-avail="1" data-walk="1" data-ben="0" data-cheap="1">
             <td class="hn">Hotel Vin<span>Deluxe King</span></td><td>Grapevine</td>
             <td class="num"><b>$856</b></td><td class="num">$1,486</td><td class="num">4.6 (850)</td>
             <td class="num">24 min</td><td class="num"><b>5 min</b></td>
             <td class="cm">Five minutes to DFW, only seven more to the stadium. Flattest pricing of the nine.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.933168,-97.076961&amp;query_place_id=ChIJw6jlPBYrTIYRQ2VGOMlFFU0" target="_blank" rel="noopener">Map</a></td>
           </tr>
-          <tr>
+          <tr data-name="Bowie House" data-n2="2479.14" data-n3="4212.62" data-rating="4.7" data-stad="21" data-dfw="33" data-avail="1" data-walk="0" data-ben="1" data-cheap="0">
             <td class="hn">Bowie House<span>Boulevard King Studio</span></td><td>Cultural District</td>
             <td class="num"><b>$2,479</b></td><td class="num">$4,213</td><td class="num">4.7 (412)</td>
             <td class="num">21 min</td><td class="num">33 min</td>
             <td class="cm">Highest rated. Breakfast, $100 credit and upgrades included. Museums on the doorstep.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.747034,-97.372595&amp;query_place_id=ChIJuVR5vg9zToYRZFl0G4WXKJs" target="_blank" rel="noopener">Map</a></td>
           </tr>
-          <tr>
+          <tr data-name="Hotel Drover" data-n2="3320.21" data-n3="5254.1" data-rating="4.5" data-stad="19" data-dfw="29" data-avail="1" data-walk="1" data-ben="0" data-cheap="0">
             <td class="hn">Hotel Drover<span>Deluxe King</span></td><td>Stockyards</td>
             <td class="num"><b>$3,320</b></td><td class="num">$5,254</td><td class="num">4.5 (1,472)</td>
             <td class="num">19 min</td><td class="num">29 min</td>
             <td class="cm">Rodeo, bars and dinner outside the door. Saturday costs 3&times; Sunday. Selling out.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.787080,-97.347073&amp;query_place_id=ChIJw-30sJx3ToYRKfGtEMtsV80" target="_blank" rel="noopener">Map</a> · <a href="https://hoteldrover.com/" target="_blank" rel="noopener">Site</a></td>
           </tr>
-          <tr>
+          <tr data-name="Live! by Loews" data-n2="3872.36" data-n3="4112.89" data-rating="4.6" data-stad="2" data-dfw="16" data-avail="1" data-walk="1" data-ben="0" data-cheap="0">
             <td class="hn">Live! by Loews<span>Luxury 2 Queen</span></td><td>Arlington</td>
             <td class="num"><b>$3,872</b></td><td class="num">$4,113</td><td class="num">4.6 (2,405)</td>
-            <td class="num"><b>14 min walk</b></td><td class="num">16 min</td>
+            <td class="num"><b>2 min ride</b><br>14 min walk</td><td class="num">16 min</td>
             <td class="cm">The only walk to the game. Sunday is its peak night. Full payment at booking.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.749500,-97.085700&amp;query_place_id=ChIJMzwS8XuHToYRlFXoTw8Tun8" target="_blank" rel="noopener">Map</a></td>
           </tr>
-          <tr class="blocked">
+          <tr class="blocked" data-name="The Crescent" data-n2="" data-n3="1884.91" data-rating="4.2" data-stad="20" data-dfw="32" data-avail="0" data-walk="0" data-ben="0" data-cheap="0">
             <td class="hn">The Crescent<span>Premier King</span></td><td>Cultural District</td>
             <td class="num warn">Not available</td><td class="num">$1,885</td><td class="num">4.2 (275)</td>
             <td class="num">20 min</td><td class="num">32 min</td>
             <td class="cm">Three-night minimum. A Saturday arrival pays for an empty Friday, roughly $600.</td>
             <td class="num"><a href="https://www.google.com/maps/search/?api=1&amp;query=32.750054,-97.365085&amp;query_place_id=ChIJ8TUSJ31zToYR8XUI0O-P32M" target="_blank" rel="noopener">Map</a> · <a href="https://thecrescenthotelfortworth.com/" target="_blank" rel="noopener">Site</a></td>
           </tr>
-          <tr class="blocked">
+          <tr class="blocked" data-name="Hyatt Place" data-n2="" data-n3="1401.69" data-rating="4.1" data-stad="5" data-dfw="16" data-avail="0" data-walk="0" data-ben="0" data-cheap="0">
             <td class="hn">Hyatt Place<span>King + sofa bed</span></td><td>Arlington</td>
             <td class="num warn">Not available</td><td class="num">$1,402</td><td class="num">4.1 (1,014)</td>
             <td class="num">5 min ride</td><td class="num">16 min</td>
@@ -700,6 +743,11 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
     </div>
   </div>
 </section>
+
+<div class="seam"><div class="wrap">
+  <span class="lab">On the food</span>
+  <p>Fort Worth has no Michelin stars. It does have the restaurant <em>Texas Monthly</em> ranked the best barbecue in the state &mdash; open three days a week, eleven to three, until it sells out.</p>
+</div></div>
 
 <section id="dining">
   <div class="wrap">
@@ -896,6 +944,11 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
   </div>
 </section>
 
+<div class="seam"><div class="wrap">
+  <span class="lab">1918</span>
+  <p>Cowtown Coliseum went up in 1908 in 88 working days. Ten years later a committee decided the livestock show needed a cowboy competition and borrowed a Spanish word for it: <em>rodeo</em>. That was the first one held indoors anywhere, and it still runs Friday and Saturday nights.</p>
+</div></div>
+
 <section id="offwall">
   <div class="wrap">
     <div class="sec-head">
@@ -938,6 +991,11 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
   </div>
 </section>
 
+<div class="seam"><div class="wrap">
+  <span class="lab">Architecture</span>
+  <p>The Kimbell is a Louis Kahn building and the Modern is a Tadao Ando. Two architects most cities would treat as a career highlight, sharing a car park.</p>
+</div></div>
+
 <section id="museums">
   <div class="wrap">
     <div class="sec-head">
@@ -967,6 +1025,11 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
   </div>
 </section>
 
+<div class="seam"><div class="wrap">
+  <span class="lab">Every day</span>
+  <p>The Fort Worth Herd is the only twice-daily cattle drive in the world. Longhorns, down Exchange Avenue, 11:30 and 4:00, every single day of the year.</p>
+</div></div>
+
 <section id="map-sec">
   <div class="wrap">
     <div class="sec-head">
@@ -993,6 +1056,47 @@ footer{padding:40px 0 56px;font-size:.78rem;color:var(--ink-soft);font-family:'J
   </div>
 </footer>
 
+<script>
+(function(){
+  var tb=document.querySelector('#mx tbody'); if(!tb) return;
+  var rows=[].slice.call(tb.rows), cnt=document.getElementById('cnt'), on={};
+  function num(r,k){var v=r.getAttribute('data-'+k); return v===''?null:parseFloat(v);}
+  function apply(){
+    var keys=Object.keys(on).filter(function(k){return on[k];}), shown=0;
+    rows.forEach(function(r){
+      var ok=keys.every(function(k){return r.getAttribute('data-'+k)==='1';});
+      r.classList.toggle('hid',!ok); if(ok) shown++;
+    });
+    cnt.textContent = shown===rows.length ? 'Showing all nine' : 'Showing '+shown+' of '+rows.length;
+  }
+  [].forEach.call(document.querySelectorAll('.chip'),function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-f'); on[f]=!on[f];
+      b.setAttribute('aria-pressed',on[f]?'true':'false'); apply();
+    });
+  });
+  [].forEach.call(document.querySelectorAll('th.s'),function(th){
+    th.addEventListener('click',function(){
+      var k=th.getAttribute('data-s'), dir=th.getAttribute('data-dir')==='a'?'d':'a';
+      [].forEach.call(document.querySelectorAll('th.s'),function(o){o.removeAttribute('data-dir');});
+      th.setAttribute('data-dir',dir);
+      var s=rows.slice().sort(function(a,b){
+        var ab=a.classList.contains('blocked'), bb=b.classList.contains('blocked');
+        if(ab!==bb) return ab?1:-1;                       // unbookable always last
+        var x,y;
+        if(k==='name'){x=a.getAttribute('data-name');y=b.getAttribute('data-name');
+          return dir==='a'?x.localeCompare(y):y.localeCompare(x);}
+        x=num(a,k); y=num(b,k);
+        if(x===null&&y===null) return 0;
+        if(x===null) return 1;                            // no price = last
+        if(y===null) return -1;
+        return dir==='a'?x-y:y-x;
+      });
+      s.forEach(function(r){tb.appendChild(r);});
+    });
+  });
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" crossorigin=""></script>
 <script>
 (function(){
